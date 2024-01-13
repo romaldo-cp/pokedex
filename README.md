@@ -1,7 +1,7 @@
 # pokedex
 1 - Enlaces de utilidad:
-API PUBLICA: ENLACE AQUÍ
-Diseños de referencia en figma: ENLACE AQUÍ
+API PUBLICA:[ENLACE AQUÍ](https://pokeapi.co/)
+Diseños de referencia en figma: [ENLACE AQUÍ](https://www.figma.com/file/ZwdLvJdXTHzN4rbOjwwpza/Pok%C3%A9dex-(Community)?type=design&node-id=0-1&mode=design&t=kwl0XiPdqxMUXNOd-0)
 2 - Descripción del ejercicio:
 La idea general es desarrollar una aplicación web, utilizando el set de tecnologías de su
 preferencia, para cumplir con los requisitos mencionados a continuación:
