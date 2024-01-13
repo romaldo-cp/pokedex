@@ -2,6 +2,7 @@
 1 - Enlaces de utilidad:
 API PUBLICA:[ENLACE AQUÍ](https://pokeapi.co/)
 Diseños de referencia en figma: [ENLACE AQUÍ](https://www.figma.com/file/ZwdLvJdXTHzN4rbOjwwpza/Pok%C3%A9dex-(Community)?type=design&node-id=0-1&mode=design&t=kwl0XiPdqxMUXNOd-0)
+
 2 - Descripción del ejercicio:
 La idea general es desarrollar una aplicación web, utilizando el set de tecnologías de su
 preferencia, para cumplir con los requisitos mencionados a continuación:
@@ -35,6 +36,7 @@ con el botón en forma de flecha hacia atrás que se muestra en los diseños.
 - Adaptar la aplicación para distintos tamaños de pantalla (móvil, tablet y desktop).
 - Desplegar la aplicación en alguna plataforma gratuita de su escogencia para su
 visualización.
+
 3 - Imágenes de referencia:
 - Los diseños completos se pueden encontrar en el archivo Figma en la primera sección,
 de donde se pueden exportar los diferentes iconos y demás elementos necesarios, las
