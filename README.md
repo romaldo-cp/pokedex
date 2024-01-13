@@ -1,4 +1,4 @@
-# pokedex
+# Pokedex
 1 - Enlaces de utilidad:
 API PUBLICA:[ENLACE AQUÍ](https://pokeapi.co/)
 Diseños de referencia en figma: [ENLACE AQUÍ](https://www.figma.com/file/ZwdLvJdXTHzN4rbOjwwpza/Pok%C3%A9dex-(Community)?type=design&node-id=0-1&mode=design&t=kwl0XiPdqxMUXNOd-0)
