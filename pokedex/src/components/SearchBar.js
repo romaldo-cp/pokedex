@@ -16,7 +16,6 @@ const SearchBar = ({ setSearchTerm }) => {
           placeholder="Buscar Pokémon"
           className="search-input"
           onChange={handleSearchChange}
-          onFocus={(e) => e.target.select()}
         />
       </div>
     </div>

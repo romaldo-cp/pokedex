@@ -44,14 +44,22 @@ body {
   margin: 0;
   font-size: 24px;
 }
-.search-section {
+
+.filter-list {
+  width: 98%;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
   background-color: var(--primary-color);
+}
+
+.search-section {
   padding: 0px 20px 20px 20px;
+  width: 80%;
 }
 .search-container {
-  display: flex;
   align-items: center;
-  border: 1px solid #ccc;
+  border: 1px solid var(--gray-color);
   border-radius: 20px;
   padding: 8px;
   background-color: var(--light-color);
@@ -68,6 +76,42 @@ body {
   padding: 5px;
   border-radius: 20px;
   font-size: 14px;
+}
+
+.sort-container {
+  position: relative;
+  height: 50px;
+  width: 50px;
+  background-color: var(--light-color);
+  border-radius: 100%;
+  border: 1px solid var(--gray-color);
+  
+  float: right;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+}
+
+.sort-icon {
+  cursor: pointer;
+  color: var(--dark-color);
+}
+.sort-card {
+  background-color: var(--primary-color);
+  padding: 6px;
+  border-radius: 4px;
+  width: 100px;
+  align-items: center;
+  position: absolute;
+  top: 80;
+  left: -120px;
+  z-index: 1;
+  box-shadow: 0px 1px 1px 0px var(--dark-color);
+}
+.sort-options {
+  background-color: var(--light-color);
+  border-radius: 6px;
+  border: 1px solid var(--gray-color);
 }
 
 .pokemon-card-container {
