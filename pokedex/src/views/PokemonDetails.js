@@ -1,24 +1,26 @@
-import React from 'react';
-import usePokemon from '../hooks/usePokemon';
+import React from "react";
+import { useParams } from "react-router-dom";
+import usePokemonDetail from "../hooks/usePokemonDetail";
 
-const PokemonDetails = ({ pokemonName }) => {
-  const { pokemon, loading } = usePokemon(pokemonName);
+const PokemonDetail = () => {
+  const { id } = useParams();
+  const apiUrl = `https://pokeapi.co/api/v2/pokemon/${id}/`;
+  const { pokemonDetail, loading } = usePokemonDetail(apiUrl);
 
   if (loading) {
-    return <p>Cargando...</p>;
+    return <p>Cargando detalles del Pokémon...</p>;
   }
 
-  if (!pokemon) {
-    return <p>Error al cargar el Pokémon.</p>;
+  if (!pokemonDetail) {
+    return <p>No se encontraron detalles para este Pokémon.</p>;
   }
 
   return (
     <div>
-      <h2>{pokemon.name}</h2>
-      <img src={pokemon.sprites.front_default} alt={pokemon.name} />
-      {/* Agrega más detalles según la estructura de datos de la API */}
+      <h2>{pokemonDetail.name}</h2>
+      <img src={pokemonDetail.sprites.front_default} alt={pokemonDetail.name} />
     </div>
   );
 };
 
-export default PokemonDetails;
+export default PokemonDetail;

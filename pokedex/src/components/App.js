@@ -1,10 +1,10 @@
-import React from 'react';
-import PokemonList from '../views/PokemonList';
-
+import React from "react";
+import PokemonList from "../views/PokemonList";
+import Header from "../components/Header";
 const App = () => {
   return (
     <div>
-      <h1>Pokédex</h1>
+      <Header />
       <PokemonList />
     </div>
   );
