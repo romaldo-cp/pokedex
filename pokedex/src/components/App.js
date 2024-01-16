@@ -1,11 +1,12 @@
 import React from "react";
-import PokemonList from "../views/PokemonList";
 import Header from "../components/Header";
+import Routes from "../routes/Routes";
+
 const App = () => {
   return (
     <div>
       <Header />
-      <PokemonList />
+      <Routes />
     </div>
   );
 };

@@ -1,6 +1,5 @@
 import React from "react";
 import logo from "../assets/img/Pokeball.svg";
-import SearchBar from "./SearchBar";
 
 const Header = () => {
   return (
@@ -9,7 +8,6 @@ const Header = () => {
       <h1 className="title">
         <strong>Pokédex</strong>{" "}
       </h1>
-      <SearchBar />
     </header>
   );
 };
