@@ -30,6 +30,9 @@ const Sort = ({ onSortChange }) => {
       </div>
       {showSortOptions && (
         <div className="sort-card">
+          <span className="sort-title">
+            <strong>Ordenar por:</strong>
+          </span>
           <div className="sort-options">
             <label>
               <input

@@ -48,16 +48,17 @@ const PokemonList = () => {
       <div className="pokemon-card-container">
         {filteredAndSortedPokemonList.map((pokemon) => (
           <Link
-            key={pokemon.id}
+            key={pokemon.name}
             to={`/pokemon/${pokemon.originalIndex}`}
             className="pokemon-card-link"
           >
             <div className="pokemon-card">
               <div className="pokemon-id">#{pokemon.originalIndex}</div>
               <img
-                src={`https://pokeres.bastionbot.org/images/pokemon/${pokemon.id}.png`}
+                src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.originalIndex}.png`}
                 alt={pokemon.name}
                 className="pokemon-image"
+                loading="lazy"
               />
               <div className="pokemon-name">{pokemon.name}</div>
             </div>
