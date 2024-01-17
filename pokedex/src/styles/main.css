@@ -3,6 +3,7 @@
   --dark-color: #1d1d1d;
   --light-color: #fff;
   --gray-color: #efefef;
+  --bug-color: #a7b723;
 }
 
 @font-face {
@@ -23,7 +24,6 @@ body {
   margin: 0;
   font-family: "Poppins-Regular", sans-serif;
   background-color: var(--primary-color);
-  color: var(--light-color);
 }
 
 .header {
@@ -31,7 +31,7 @@ body {
   display: flex;
   align-items: center;
   text-align: center;
-  width: 96%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -57,6 +57,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--light-color);
 }
 
 .filter-list {
@@ -171,12 +172,25 @@ body {
   border-radius: 20px;
   padding: 1%;
 }
+
 .pokemon-card {
-  padding: 10px;
   border-radius: 20px;
   background-color: var(--light-color);
   box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-size: cover;
+}
+
+.pokemon-number {
+  font-size: 14px;
+  color: var(--dark-gray-color);
+  position: absolute;
+  float: right;
 }
 
 .pokemon-card:hover {
@@ -190,19 +204,10 @@ body {
   color: var(--dark-color);
 }
 
-.pokemon-number {
-  width: 100px;
-  height: 16px;
-  font-size: 14px;
-  color: var(--dark-gray-color);
-}
-
 .pokemon-image {
-  width: 90%;
-  height: 90%;
-  object-fit: cover;
+  width: 100px;
+  height: 100px;
   transition: transform 0.8s ease-in-out;
-  margin: 0 auto;
 }
 
 .pokemon-card:hover .pokemon-image {
@@ -221,4 +226,75 @@ body {
 
 .pokemon-card:hover .pokemon-name {
   font-weight: bold;
+}
+
+.pokemon-detail-container {
+  text-align: center;
+}
+
+.pokemon-title {
+  text-transform: uppercase;
+  color: var(--light-color);
+}
+
+.image-container .pokemon-image {
+  width: 200px;
+  height: 200px;
+}
+
+.info-container {
+  width: 94%;
+  background-color: var(--light-color);
+  border-radius: 20px;
+  padding: 2%;
+  margin: 0 auto;
+  border: 1px solid var(--gray-color);
+}
+
+.info-box {
+  display: flex;
+  justify-content: space-around;
+}
+
+.description {
+  margin-top: 20px;
+}
+.stats-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.stat-name {
+  font-weight: bold;
+  flex: 1;
+}
+
+.stat-number {
+  margin-left: 5px;
+  margin-right: 5px;
+  flex: 1;
+}
+
+.progress-bar-container {
+  flex-grow: 1;
+  height: 14px;
+  background-color: #eee;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  flex: 4;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #4caf50;
 }

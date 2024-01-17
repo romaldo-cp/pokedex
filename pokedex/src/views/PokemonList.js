@@ -61,7 +61,7 @@ const PokemonList = () => {
             <div className="pokemon-card">
               <div className="pokemon-id">#{pokemon.originalIndex}</div>
               <img
-                src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.originalIndex}.png`}
+                src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemon.originalIndex}.svg`}
                 alt={pokemon.name}
                 className="pokemon-image"
                 loading="lazy"
