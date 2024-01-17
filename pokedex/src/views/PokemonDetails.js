@@ -28,7 +28,7 @@ const PokemonDetail = () => {
       <Link to="/">Volver a la Pokédex</Link>
       <h2>{pokemon.name}</h2>
       <img
-        src={`https://pokeres.bastionbot.org/images/pokemon/${id}.png`}
+        src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`}
         alt={pokemon.name}
       />
 

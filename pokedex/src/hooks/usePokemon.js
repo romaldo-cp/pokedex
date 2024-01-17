@@ -12,7 +12,7 @@ const usePokemon = () => {
 
         const response = await api.get("pokemon", {
           params: {
-            limit: 1000,
+            limit: 151,
           },
         });
 

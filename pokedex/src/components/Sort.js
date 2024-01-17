@@ -44,6 +44,7 @@ const Sort = ({ onSortChange }) => {
               />
               Número
             </label>
+            <br />
             <label>
               <input
                 type="radio"

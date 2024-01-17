@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import usePokemon from "../hooks/usePokemon";
 import SearchBar from "../components/SearchBar";
 import Sort from "../components/Sort";
+import PokeballImage from "../assets/img/Pokeball.svg";
 
 const PokemonList = () => {
   const { pokemonList, loading } = usePokemon();
@@ -10,7 +11,12 @@ const PokemonList = () => {
   const [sortOption, setSortOption] = useState(null);
 
   if (loading) {
-    return <p>Cargando la lista de Pokémon...</p>;
+    return (
+      <div className="spinner-container">
+        <img src={PokeballImage} alt="Pokeball Spinner" className="spinner" />
+        <span>Cargando la lista de Pokémon...</span>
+      </div>
+    );
   }
 
   const numberedPokemonList = pokemonList.map((pokemon, originalIndex) => ({
