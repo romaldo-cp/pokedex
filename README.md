@@ -1,5 +1,5 @@
 # Pokedex con React
-DEMO: [ENLACE AQUÍ]((https://pokedex.cuspry.com/)) 
+DEMO: [ENLACE AQUÍ](https://pokedex.cuspry.com/)
 
 1 - Enlaces de utilidad:
 API PUBLICA:[ENLACE AQUÍ](https://pokeapi.co/)
