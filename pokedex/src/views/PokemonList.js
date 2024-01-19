@@ -4,7 +4,7 @@ import usePokemon from "../hooks/usePokemon";
 import SearchBar from "../components/SearchBar";
 import Sort from "../components/Sort";
 import PokeballImage from "../assets/img/Pokeball.svg";
-
+import Header from "../components/Header";
 const PokemonList = () => {
   const { pokemonList, loading } = usePokemon();
   const [searchTerm, setSearchTerm] = useState("");
@@ -45,7 +45,9 @@ const PokemonList = () => {
   };
 
   return (
+    
     <div>
+      <Header />
       <div className="filter-list">
         <SearchBar setSearchTerm={setSearchTerm} />
         <Sort onSortChange={handleSortChange} />
@@ -59,7 +61,7 @@ const PokemonList = () => {
             className="pokemon-card-link"
           >
             <div className="pokemon-card">
-              <div className="pokemon-id">#{pokemon.originalIndex}</div>
+            <div className="pokemon-number">#{pokemon.originalIndex.toString().padStart(3, '0')}</div>
               <img
                 src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemon.originalIndex}.svg`}
                 alt={pokemon.name}

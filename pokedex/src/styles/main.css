@@ -2,10 +2,11 @@
   --primary-color: #dc0a2d;
   --dark-color: #1d1d1d;
   --light-color: #fff;
-  --gray-color: #efefef;
-  --bug-color: #a7b723;
+  --gray-color: #c4c4c4;
 }
-
+a {
+  text-decoration: none;
+}
 @font-face {
   font-family: "Poppins-Regular";
   src: url("../assets/font/Poppins-Regular.ttf") format("truetype");
@@ -25,7 +26,7 @@ body {
   font-family: "Poppins-Regular", sans-serif;
   background-color: var(--primary-color);
 }
-
+/* Vista de listado de pokemon*/
 .header {
   padding: 20px;
   display: flex;
@@ -84,7 +85,7 @@ body {
 }
 
 .search-container:hover {
-  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.3);
 }
 
 .search-icon {
@@ -112,10 +113,11 @@ body {
   justify-content: center;
   transition: box-shadow 0.3s ease-in-out;
   margin-left: 10px;
+  box-shadow: 8px 8px 15px 0px rgba(0, 0, 0, 0.1);
 }
 
 .sort-container:hover {
-  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
 }
 
 .sort-container-alt {
@@ -145,13 +147,14 @@ body {
   background-color: var(--primary-color);
   padding: 6px;
   border-radius: 4px;
-  width: 100px;
+  width: 120px;
+  height: 100px;
   align-items: center;
   position: absolute;
   top: 80;
-  left: -120px;
+  left: -150px;
   z-index: 1;
-  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
 }
 .sort-title {
   color: var(--light-color);
@@ -172,7 +175,6 @@ body {
   border-radius: 20px;
   padding: 1%;
 }
-
 .pokemon-card {
   border-radius: 20px;
   background-color: var(--light-color);
@@ -190,7 +192,8 @@ body {
   font-size: 14px;
   color: var(--dark-gray-color);
   position: absolute;
-  float: right;
+  top: 10px;
+  right: 10px;
 }
 
 .pokemon-card:hover {
@@ -200,7 +203,6 @@ body {
 }
 
 .pokemon-card-link {
-  text-decoration: none;
   color: var(--dark-color);
 }
 
@@ -228,34 +230,108 @@ body {
   font-weight: bold;
 }
 
-.pokemon-detail-container {
-  text-align: center;
+/* Vista de detalles*/
+.pokeball-image {
+  position: fixed;
+  top: 1%;
+  left: 60%;
+  width: 30%;
+  height: 30%;
+  z-index: -1;
+  opacity: 0.2;
 }
 
-.pokemon-title {
+.pokemon-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   text-transform: uppercase;
   color: var(--light-color);
+  width: 90%;
+  margin: 0 auto;
+}
+
+.pokemon-title a {
+  color: inherit;
+  margin-right: 10px;
+}
+
+#pokemon-number {
+  margin-left: auto;
+}
+
+.navigation-container {
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease-in-out;
+  color: var(--light-color);
+  margin-top: 300%;
+}
+
+.navigation:hover {
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .image-container .pokemon-image {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
+  margin-bottom: -40px;
 }
 
 .info-container {
-  width: 94%;
+  width: 90%;
   background-color: var(--light-color);
   border-radius: 20px;
   padding: 2%;
   margin: 0 auto;
   border: 1px solid var(--gray-color);
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.2);
 }
 
+.types-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.type {
+  color: var(--light-color);
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 10px;
+  margin-right: 12px;
+  background: var(--dark-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.about-text {
+  text-align: center;
+}
 .info-box {
   display: flex;
   justify-content: space-around;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.info-image {
+  margin-right: 10px;
 }
 
+.info-title {
+  color: dimgrey;
+}
 .description {
   margin-top: 20px;
 }
@@ -291,10 +367,22 @@ body {
   overflow: hidden;
   display: flex;
   align-items: flex-start;
-  flex: 4;
+  flex: 2;
 }
 
 .progress-bar {
   height: 100%;
-  background-color: #4caf50;
+  background-color: #dc0a2d;
+}
+
+footer {
+  color: var(--light-color);
+  text-align: center;
+  padding: 1rem;
+  bottom: 0;
+  width: 100%;
+}
+
+footer a {
+  color: var(--light-color);
 }
